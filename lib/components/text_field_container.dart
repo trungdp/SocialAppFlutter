@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/components/rounded_text_field.dart';
-import 'package:myapp/constants.dart';
 
 class RoundedTextField extends StatelessWidget {
   final String hintText;
@@ -15,15 +14,30 @@ class RoundedTextField extends StatelessWidget {
     return TextFieldContainer(
       child: TextField(
         onChanged: onChanged,
+        textInputAction: TextInputAction.next,
+        onSubmitted: (_) =>
+            FocusScope.of(context).nextFocus(), // move focus to next
         decoration: InputDecoration(
-            icon: Icon(
-              icon,
-              color: kPrimaryColor,
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              width: 2,
+              color: Color.fromRGBO(241, 241, 244, 1),
             ),
-            hintText: hintText,
-            border: InputBorder.none),
+          ),
+          labelText: hintText,
+          labelStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Color.fromRGBO(160, 169, 179, 1),
+          ),
+        ),
+        style: TextStyle(fontWeight: FontWeight.bold),
       ),
     );
   }
-}
 
+  // _fieldFocusChange(
+  //     BuildContext context, FocusNode currentFocus, FocusNode nextFocus) {
+  //   currentFocus.unfocus();
+  //   FocusScope.of(context).requestFocus(nextFocus);
+  // }
+}

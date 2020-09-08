@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/components/rounded_text_field.dart';
-import 'package:myapp/constants.dart';
+
+var _weightController = TextEditingController();
 
 class RoundedPasswordField extends StatelessWidget {
   final ValueChanged<String> onChanged;
@@ -10,21 +11,39 @@ class RoundedPasswordField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFieldContainer(
-      child: TextField(
-        obscureText: true,
-        onChanged: onChanged,
-        decoration: InputDecoration(
-            hintText: 'Password',
-            icon: Icon(
-              Icons.person,
-              color: kPrimaryColor,
+        child: Row(
+      children: <Widget>[
+        Expanded(
+          child: TextField(
+            controller: _weightController,
+            obscureText: true,
+            onChanged: onChanged,
+            textInputAction: TextInputAction.done,
+            decoration: InputDecoration(
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              hintText: 'MẬT KHẨU *',
+              // icon: Icon(
+              //   Icons.person,
+              //   color: kPrimaryColor,
+              // ),
+              suffixText: 'Quên mật khẩu?',
+              suffixStyle: const TextStyle(
+                color: Colors.black,
+                decoration: TextDecoration.underline,
+              ),
+              // suffixStyle:
+              //     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(
+                  width: 2,
+                  color: Color.fromRGBO(241, 241, 244, 1),
+                ),
+              ),
             ),
-            suffixIcon: Icon(
-              Icons.visibility,
-              color: kPrimaryColor,
-            ),
-            border: InputBorder.none),
-      ),
-    );
+          ),
+        ),
+        // Positioned(child: Text('Quên mật khẩu'), top: 0)
+      ],
+    ));
   }
 }
