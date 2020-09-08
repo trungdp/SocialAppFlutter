@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Screens/Login/login_screen.dart';
-import 'package:myapp/constants.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:myapp/Screens/ChangePass/change_pass_screen.dart';
 import 'package:flutter/services.dart';
 import 'package:myapp/components/parseColor.dart';
-import 'package:myapp/Screens/ChangePassword/ChangePasswordScreen.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
+import 'package:myapp/constants.dart';
+import 'package:myapp/localizations/app_localizations.dart';
+
+import 'Screens/ForgotPassword/forgot_pass_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,10 +18,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       // systemNavigationBarColor: Colors.blue, // navigation bar color
-      statusBarColor: parseColor('#edf9ff'), // status bar color
+      statusBarColor: Color(0xEFFAFE), // status bar color
     ));
-
+    FlutterStatusbarcolor.setStatusBarColor(Color(0xEFFAFE));
     return MaterialApp(
+      locale: const Locale('vi', ''),
+      localizationsDelegates: [
+        const AppLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', ''),
+        const Locale('vi', ''),
+      ],
       debugShowCheckedModeBanner: false,
       title: 'Flutter Auth',
       theme: ThemeData(
@@ -26,7 +40,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nunito',
         // appBarTheme: Theme.of(context).appBarTheme.copyWith(brightness: Brightness.light),
       ),
-      home: LoginScreen(),
+      home: ForgotPasswordScreen(),
     );
   }
 }
