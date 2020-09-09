@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:myapp/Screens/ChangePass/change_pass_screen.dart';
 import 'package:flutter/services.dart';
+import 'package:myapp/Screens/Login/login_screen.dart';
 import 'package:myapp/components/parseColor.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 import 'package:myapp/constants.dart';
 import 'package:myapp/localizations/app_localizations.dart';
-
 import 'Screens/ForgotPassword/forgot_pass_screen.dart';
+import 'Screens/Login/login_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       // systemNavigationBarColor: Colors.blue, // navigation bar color
-      statusBarColor: Color(0xEFFAFE), // status bar color
+      statusBarColor: Color(0xFFEFFAFE), // status bar color
     ));
     FlutterStatusbarcolor.setStatusBarColor(Color(0xEFFAFE));
     return MaterialApp(
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nunito',
         // appBarTheme: Theme.of(context).appBarTheme.copyWith(brightness: Brightness.light),
       ),
-      home: ForgotPasswordScreen(),
+      home: ChangePassScreen(),
     );
   }
 }
