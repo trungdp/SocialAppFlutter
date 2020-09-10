@@ -7,7 +7,19 @@ import 'app_localizations.dart';
 
 class AppLocalizationsVI implements AppLocalizations {
   const AppLocalizationsVI();
+  //ConfirmCode
+  String get requireSuccess => "Yêu cầu thành công";
 
+  String get activeCode => "MÃ KÍCH HOẠT";
+
+  String get activeText =>
+      "Vui lòng nhập mã kích hoạt để chúng tôi\n chuyển sang màn hình đổi mật khẩu";
+
+  String get error => "Lỗi:";
+
+  String get confirmCode => "Xác nhận mã";
+
+  String get goBack => "Quay lại";
   //Forgot pass
   @override
   String get forgotPassText => "Quên mật khẩu?";

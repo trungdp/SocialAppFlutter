@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Screens/Login/components/body.dart';
 
-
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: parseColor('#e6f6ff'),
-      resizeToAvoidBottomInset: false, // avoid overflow when focus input == resizeToAvoidBottomPadding
+      resizeToAvoidBottomInset:
+          false, // avoid overflow when focus input == resizeToAvoidBottomPadding
       // bottomNavigationBar: BottomAppBar(
       //     color: Colors.transparent,
       //     child: Padding(
