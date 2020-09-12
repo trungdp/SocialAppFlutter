@@ -21,11 +21,11 @@ class PasswordField extends StatelessWidget {
             onChanged: onChanged,
             textInputAction: TextInputAction.done,
             decoration: InputDecoration(
-              floatingLabelBehavior: FloatingLabelBehavior.always,
-              hintText: this.text,
-              suffixStyle: const TextStyle(
+              // floatingLabelBehavior: FloatingLabelBehavior.always,
+              labelText: this.text,
+              labelStyle: const TextStyle(
                 color: Colors.black,
-                decoration: TextDecoration.underline,
+                // decoration: TextDecoration.underline,
               ),
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(

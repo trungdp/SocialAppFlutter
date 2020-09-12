@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/components/confirm_field.dart';
 import 'package:myapp/components/primary_button.dart';
-import 'package:myapp/components/password_field.dart';
 import 'package:myapp/components/text_field_container.dart';
 import 'package:myapp/localizations/app_localizations.dart';
 
@@ -51,7 +49,7 @@ class Body extends StatelessWidget {
               ),
             ),
             RoundedTextField(
-              hintText: "EMAIL",
+              lable: "EMAIL",
               onChanged: (value) {},
             ),
             PrimaryButton(

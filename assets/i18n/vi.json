@@ -5,5 +5,44 @@
     "error": "Lỗi:",
     "confirmCode": "Xác nhận mã",
     "goBack": "Quay lại",
-    "userSignUp":"Đăng ký"
+    "requiredText": "Vui lòng điền đủ các thông tin cần thiết",
+    "newPassword": "Mật khẩu mới",
+    "lblEmail": "Email",
+    "lblPassword": "Mật khẩu",
+    "lblForgotPass": "Quên mật khẩu",
+    "btn": {
+        "next": "Tiếp tục"
+    },
+    "login": {
+        "title": "Đăng nhập",
+        "language": "Ngôn ngữ",
+        "email": "EMAIL *",
+        "password": "MẬT KHẨU *",
+        "or": "hoặc",
+        "titleFooter": "Bạn chưa có tài khoản?",
+        "registerNow": "Đăng ký ngay",
+        "require": "Vui lòng điền đầy đủ các thông tin bên dưới",
+        "facebook": "Đăng nhập bằng Facebook"
+    },
+    "register": {
+        "title": "Đăng ký",
+        "require": "Vui lòng điền đầy đủ các thông tin cần thiết",
+        "name": "HỌ VÀ TÊN *",
+        "email": "EMAIL *",
+        "password": "MẬT KHẨU *",
+        "infoContact": "Thông tin liên hệ của bạn",
+        "country": "QUỐC GIA",
+        "city": "THÀNH PHỐ",
+        "districtWard": "QUẬN/HUYỆN",
+        "address": "ĐỊA CHỈ *",
+        "phone": "SỐ ĐIỆN THOẠI *",
+        "agreeWith": "Đồng ý với",
+        "termsOfUse": "điều khoản sử dụng",
+        "btnFinish": "Hoàn tất đăng ký"
+    },
+    "changePassword":{
+        "title": "Đổi mật khẩu",
+        "newPass":"MẬT KHẨU MỚI",
+        "confirmPassword":"NHẬP LẠI MẬT KHẨU"
+    }
 }

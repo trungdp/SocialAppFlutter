@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/components/activeCode_filed.dart';
-import 'package:myapp/components/confirm_field.dart';
 import 'package:myapp/components/primary_button.dart';
-import 'package:myapp/components/rounded_button.dart';
-import 'package:myapp/components/password_field.dart';
 import 'package:myapp/components/text_field_container.dart';
 import 'package:myapp/localizations/AppLocalizations.dart';
 
@@ -57,7 +53,7 @@ class Body extends StatelessWidget {
               ),
             ),
             RoundedTextField(
-              hintText: locale.translate("activeCode"),
+              lable: locale.translate("activeCode"),
               onChanged: (value) {},
             ),
             Container(

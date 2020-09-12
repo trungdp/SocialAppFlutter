@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/components/confirm_field.dart';
 import 'package:myapp/components/primary_button.dart';
-import 'package:myapp/components/rounded_button.dart';
 import 'package:myapp/components/password_field.dart';
-import 'package:myapp/localizations/app_localizations.dart';
+import 'package:myapp/components/rounded_button.dart';
+import 'package:myapp/localizations/AppLocalizations.dart';
 
 class Body extends StatelessWidget {
   final Function onPasswordChanged;
@@ -15,54 +15,65 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final locale = AppLocalizations.of(context);
+    final locale = ApplicationLocalizations.of(context);
     return Container(
         child: new Stack(
       children: <Widget>[
         Column(
           children: <Widget>[
             Align(
-                alignment: Alignment.topRight,
-                child: IconButton(
-                  icon: new Icon(Icons.clear),
-                  onPressed: () {},
-                )),
+              alignment: Alignment.topRight,
+              child: IconButton(
+                icon: new Icon(Icons.clear),
+                onPressed: () {},
+              ),
+            ),
             Container(
-              margin: const EdgeInsets.only(top: 70.0, left: 15),
-              child: Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  locale.changePassText,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 30,
-                    color: Color.fromRGBO(89, 176, 250, 1),
+              margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      locale.translate('changePassword.title'),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Color.fromRGBO(89, 176, 250, 1),
+                      ),
+                    ),
                   ),
-                ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0, bottom: 30.0),
+                    child: Text(
+                      locale.translate('login.require'),
+                      style: TextStyle(
+                          color: Color.fromRGBO(119, 119, 127, 1),
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  PasswordField(
+                    onChanged: this.onPasswordChanged,
+                    text: locale.translate('changePassword.newPass'),
+                  ),
+                  PasswordField(
+                    onChanged: this.onConfirmChanged,
+                    text: locale.translate('changePassword.confirmPassword'),
+                  ),
+                  RoundedButton(
+                    text: locale.translate('changePassword.title'),
+                    color: Color.fromRGBO(78, 153, 242, 1),
+                    textColor: Colors.white,
+                    press: this.onSubmit,
+                    iconRight: Icon(
+                      Icons.arrow_forward,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
               ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 10.0, bottom: 50),
-              child: Text(
-                locale.requiredText,
-                style: TextStyle(
-                    color: Color.fromRGBO(119, 119, 127, 1),
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            new PasswordField(
-              onChanged: this.onPasswordChanged,
-              text: locale.newPassword,
-            ),
-            new ConfirmField(
-              onChanged: this.onConfirmChanged,
-              text: locale.confirmPassword,
-            ),
-            PrimaryButton(
-              text: locale.changePassText,
-              color: Color.fromRGBO(78, 153, 242, 1),
-              textColor: Colors.white,
-              onClick: this.onSubmit,
             ),
           ],
         ),

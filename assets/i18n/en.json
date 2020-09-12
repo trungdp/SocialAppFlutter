@@ -4,5 +4,19 @@
     "activeCode": "ACTIVE CODE",
     "error": "Error:",
     "confirmCode": "Active Code",
-    "goBack": "Back"
+    "goBack": "Back",
+    "userSignUp": "Đăng ký",
+    "requiredText": "Vui lòng điền đủ các thông tin cần thiết",
+    "newPassword": "Mật khẩu mới",
+    "lblEmail": "Email",
+    "lblPassword": "Mật khẩu",
+    "lblForgotPass": "Quên mật khẩu",
+    "lblOr": "hoặc",
+    "login": {
+        "title": "Đăng nhập",
+        "language":"Ngôn ngữ",
+        "titleFooter": "Bạn chưa có tài khoản?",
+        "registerNow": "Đăng ký ngay",
+        "require": "Vui lòng điền đầy đủ các thông tin bên dưới"
+    }
 }

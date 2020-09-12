@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/components/primary_button.dart';
 import 'package:myapp/components/password_field.dart';
+import 'package:myapp/components/rounded_button.dart';
 import 'package:myapp/components/text_field_container.dart';
 import 'package:myapp/localizations/AppLocalizations.dart';
 
@@ -28,39 +28,56 @@ class Body extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 70.0, left: 15),
-              child: Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  locale.translate("userSignUp"),
-                  style: TextStyle(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 30,
-                    color: Color.fromRGBO(89, 176, 250, 1),
+              margin: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      locale.translate('register.title'),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Color.fromRGBO(89, 176, 250, 1),
+                      ),
+                    ),
                   ),
-                ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10.0, bottom: 30.0),
+                    child: Text(
+                      locale.translate('register.require'),
+                      style: TextStyle(
+                          color: Color.fromRGBO(119, 119, 127, 1),
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  RoundedTextField(
+                    lable: locale.translate('register.name'),
+                    onChanged: (value) {},
+                  ),
+                  RoundedTextField(
+                    lable: locale.translate('register.email'),
+                    onChanged: (value) {},
+                  ),
+                  PasswordField(
+                      text: locale.translate('register.password'),
+                      onChanged: this.onPasswordChanged),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: RoundedButton(
+                      text: locale.translate('btn.next'),
+                      textColor: Colors.white,
+                      press: this.onSubmit,
+                      iconRight: Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                      ),
+                    ),
+                  )
+                ],
               ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(top: 10.0, bottom: 50),
-              child: Text(
-                locale.requiredText,
-                style: TextStyle(
-                    color: Color.fromRGBO(119, 119, 127, 1),
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            RoundedTextField(hintText: 'HỌ VÀ TÊN *', onChanged: (value) {}),
-            RoundedTextField(hintText: 'EMAIL *', onChanged: (value) {}),
-            new PasswordField(
-              onChanged: this.onPasswordChanged,
-              text: locale.newPassword,
-            ),
-            PrimaryButton(
-              text: 'Tiếp tục',
-              color: Color.fromRGBO(78, 153, 242, 1),
-              textColor: Colors.white,
-              onClick: this.onSubmit,
             ),
           ],
         ),

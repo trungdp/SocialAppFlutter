@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
-import 'package:myapp/Screens/Register/StepOne/step_one_screen.dart';
-import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
+import 'package:myapp/Screens/ChangePass/change_pass_screen.dart';
 import 'localizations/AppLocalizations.dart';
 
 void main() => runApp(MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       // systemNavigationBarColor: Colors.blue, // navigation bar color
       statusBarColor: Color(0xFFEFFAFE), // status bar color
     ));
-    FlutterStatusbarcolor.setStatusBarColor(Color(0xEFFAFE));
+    FlutterStatusbarcolor.setStatusBarColor(Color(0xFFFFFF));
     return MaterialApp(
       locale: const Locale('vi', ''),
       supportedLocales: [
@@ -47,7 +46,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nunito',
         // appBarTheme: Theme.of(context).appBarTheme.copyWith(brightness: Brightness.light),
       ),
-      home: RegisterStepOneScreen()
+      home: ChangePassScreen()
     );
   }
 }

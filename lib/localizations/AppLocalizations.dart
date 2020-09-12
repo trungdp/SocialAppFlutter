@@ -13,14 +13,14 @@ class ApplicationLocalizations {
         context, ApplicationLocalizations);
   }
 
-  Map<String, String> _localizedStrings;
+  Map<String, dynamic> _localizeStrings;
 
   Future<bool> load() async {
     String jsonString = await rootBundle
         .loadString('assets/i18n/${appLocale.languageCode}.json');
     Map<String, dynamic> jsonLanguageMap = json.decode(jsonString);
-    _localizedStrings = jsonLanguageMap.map((key, value) {
-      return MapEntry(key, value.toString());
+    _localizeStrings = jsonLanguageMap.map((key, value) {
+      return MapEntry(key, value);
     });
     return true;
   }
@@ -28,8 +28,10 @@ class ApplicationLocalizations {
   static const LocalizationsDelegate<ApplicationLocalizations> delegate =
       _AppLocalizationsDelegate();
 
-  String translate(String jsonkey) {
-    return _localizedStrings[jsonkey];
+  String translate(String key) {
+    List<dynamic> keys = key.split('.');
+    var value = keys.fold(_localizeStrings, (obj, key) => obj[key]);
+    return value != '' ? value : key;
   }
 }
 
