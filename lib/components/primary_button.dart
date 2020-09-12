@@ -49,7 +49,7 @@ class PrimaryButton extends StatelessWidget {
                     text,
                     style: TextStyle(
                       color: textColor,
-                      fontSize: 14,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

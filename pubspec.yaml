@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  provider: ^4.0.4
   english_words: ^3.1.5
   flutter:
     sdk: flutter
@@ -55,6 +56,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/i18n/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

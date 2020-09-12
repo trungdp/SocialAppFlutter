@@ -11,6 +11,18 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
+  //ConfirmCode
+  String get requireSuccess;
+
+  String get activeCode;
+
+  String get activeText;
+
+  String get error;
+
+  String get confirmCode;
+
+  String get goBack;
   //Forgot Pass
   String get forgotPassText;
 
