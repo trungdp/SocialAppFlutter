@@ -28,7 +28,7 @@ class AppLocalizationsVI implements AppLocalizations {
   String get requiredText => "Vui lòng điền đầy đủ các thông tin bên dưới";
 
   @override
-  String get newPassword => "MẬT KHẨU MỚI";
+  String get newPassword => "MẬT KHẨU *";
 
   @override
   String get confirmPassword => "NHẬP LẠI MẬT KHẨU";
@@ -51,7 +51,10 @@ class AppLocalizationsVI implements AppLocalizations {
 
   /// Sign up
   @override
-  String get userSignUp => 'Inschrijven';
+  String get userSignUp => 'Đăng ký';
+
+  // @override
+  // String get assword => 'MẬT KHẨU';
 
   @override
   String get userSignUpHaveAccount => 'Heeft u reeds een account?';

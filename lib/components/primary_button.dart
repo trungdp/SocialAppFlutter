@@ -39,12 +39,12 @@ class PrimaryButton extends StatelessWidget {
             color: color,
             onPressed: onClick,
             child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.arrow_forward,
-                    color: color,
-                  ),
+                  // Icon(
+                  //   Icons.arrow_forward,
+                  //   color: color,
+                  // ),
                   Text(
                     text,
                     style: TextStyle(
@@ -53,10 +53,10 @@ class PrimaryButton extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
-                  ),
+                  // Icon(
+                  //   Icons.arrow_forward,
+                  //   color: Colors.white,
+                  // ),
                 ])),
       ),
     );
