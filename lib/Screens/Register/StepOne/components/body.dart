@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/components/primary_button.dart';
 import 'package:myapp/components/password_field.dart';
 import 'package:myapp/components/text_field_container.dart';
-import 'package:myapp/localizations/app_localizations.dart';
+import 'package:myapp/localizations/AppLocalizations.dart';
 
 class Body extends StatelessWidget {
   final Function onPasswordChanged;
@@ -14,7 +14,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final locale = AppLocalizations.of(context);
+    final locale = ApplicationLocalizations.of(context);
     return Container(
         child: new Stack(
       children: <Widget>[
@@ -32,7 +32,7 @@ class Body extends StatelessWidget {
               child: Align(
                 alignment: Alignment.bottomLeft,
                 child: Text(
-                  locale.userSignUp,
+                  locale.translate("userSignUp"),
                   style: TextStyle(
                     fontWeight: FontWeight.w900,
                     fontSize: 30,
