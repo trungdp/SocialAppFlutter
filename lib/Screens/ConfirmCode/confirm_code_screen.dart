@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Screens/ConfirmCode/components/body.dart';
+import '../../localizations/AppLocalizations.dart';
 
 class ConfirmCodeScreen extends StatelessWidget {
   @override

@@ -5,7 +5,7 @@ import 'package:myapp/components/primary_button.dart';
 import 'package:myapp/components/rounded_button.dart';
 import 'package:myapp/components/password_field.dart';
 import 'package:myapp/components/text_field_container.dart';
-import 'package:myapp/localizations/app_localizations.dart';
+import 'package:myapp/localizations/AppLocalizations.dart';
 
 class Body extends StatelessWidget {
   final Function onPasswordChanged;
@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final locale = AppLocalizations.of(context);
+    final locale = ApplicationLocalizations.of(context);
     return Container(
         child: new Stack(
       children: <Widget>[
@@ -38,7 +38,8 @@ class Body extends StatelessWidget {
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  locale.requireSuccess,
+                  ApplicationLocalizations.of(context)
+                      .translate("requireSuccess"),
                   style: TextStyle(
                     fontWeight: FontWeight.w900,
                     fontSize: 30,
@@ -50,13 +51,13 @@ class Body extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(top: 10.0, bottom: 50),
               child: Text(
-                locale.activeText,
+                locale.translate("activeText"),
                 style: TextStyle(
                     color: Colors.black87, fontWeight: FontWeight.normal),
               ),
             ),
             RoundedTextField(
-              hintText: locale.activeCode,
+              hintText: locale.translate("activeCode"),
               onChanged: (value) {},
             ),
             Container(
@@ -65,7 +66,7 @@ class Body extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    locale.error,
+                    locale.translate('error'),
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 15,
@@ -77,7 +78,7 @@ class Body extends StatelessWidget {
               ),
             ),
             PrimaryButton(
-              text: locale.confirmCode,
+              text: locale.translate("confirmCode"),
               color: Color.fromRGBO(78, 153, 242, 1),
               textColor: Colors.white,
               onClick: this.onSubmit,
@@ -86,7 +87,7 @@ class Body extends StatelessWidget {
               color: Colors.transparent,
               onPressed: () {},
               child: Text(
-                locale.goBack,
+                locale.translate("goBack"),
                 style: TextStyle(color: Colors.black87, fontSize: 16),
               ),
             ),

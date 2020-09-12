@@ -1,0 +1,8 @@
+{
+    "requireSuccess": "Yêu cầu thành công",
+    "activeText": "Vui lòng nhập mã kích hoạt để chúng tôi\n chuyển sang màn hình đổi mật khẩu",
+    "activeCode": "MÃ KÍCH HOẠT",
+    "error": "Lỗi:",
+    "confirmCode": "Xác nhận mã",
+    "goBack": "Quay lại"
+}

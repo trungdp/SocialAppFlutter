@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:myapp/Screens/ChangePass/change_pass_screen.dart';
 import 'package:flutter/services.dart';
 import 'package:myapp/Screens/ConfirmCode/confirm_code_screen.dart';
-import 'package:myapp/Screens/Login/login_screen.dart';
-import 'package:myapp/components/parseColor.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
-import 'package:myapp/constants.dart';
-import 'package:myapp/localizations/app_localizations.dart';
-import 'Screens/ForgotPassword/forgot_pass_screen.dart';
-import 'Screens/Login/login_screen.dart';
+import 'localizations/AppLocalizations.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,15 +19,25 @@ class MyApp extends StatelessWidget {
     FlutterStatusbarcolor.setStatusBarColor(Color(0xEFFAFE));
     return MaterialApp(
       locale: const Locale('vi', ''),
+      supportedLocales: [
+        const Locale('vi', ''),
+        const Locale('en', ''),
+      ],
       localizationsDelegates: [
-        const AppLocalizationsDelegate(),
+        ApplicationLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: [
-        const Locale('en', ''),
-        const Locale('vi', ''),
-      ],
+      localeResolutionCallback: (locale, supportedLocales) {
+        for (var supportedLocale in supportedLocales) {
+          if (supportedLocale.languageCode == locale.languageCode &&
+              supportedLocale.countryCode == locale.countryCode) {
+            // log(supportedLocale.languageCode);
+            return supportedLocale;
+          }
+        }
+        return supportedLocales.first;
+      },
       debugShowCheckedModeBanner: false,
       title: 'Flutter Auth',
       theme: ThemeData(
