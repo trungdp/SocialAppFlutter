@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/components/confirm_field.dart';
-import 'package:myapp/components/primary_button.dart';
 import 'package:myapp/components/password_field.dart';
 import 'package:myapp/components/rounded_button.dart';
 import 'package:myapp/localizations/AppLocalizations.dart';
@@ -9,9 +7,12 @@ class Body extends StatelessWidget {
   final Function onPasswordChanged;
   final Function onConfirmChanged;
   final Function onSubmit;
-  const Body(
-      {Key key, this.onPasswordChanged, this.onConfirmChanged, this.onSubmit})
-      : super(key: key);
+  const Body({
+    Key key,
+    this.onPasswordChanged,
+    this.onConfirmChanged,
+    this.onSubmit,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class Body extends StatelessWidget {
                     child: Text(
                       locale.translate('changePassword.title'),
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w900,
                         fontSize: 30,
                         color: Color.fromRGBO(89, 176, 250, 1),
                       ),
@@ -62,14 +63,17 @@ class Body extends StatelessWidget {
                     onChanged: this.onConfirmChanged,
                     text: locale.translate('changePassword.confirmPassword'),
                   ),
-                  RoundedButton(
-                    text: locale.translate('changePassword.title'),
-                    color: Color.fromRGBO(78, 153, 242, 1),
-                    textColor: Colors.white,
-                    press: this.onSubmit,
-                    iconRight: Icon(
-                      Icons.arrow_forward,
-                      color: Colors.white,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: RoundedButton(
+                      text: locale.translate('changePassword.title'),
+                      color: Color.fromRGBO(78, 153, 242, 1),
+                      textColor: Colors.white,
+                      press: this.onSubmit,
+                      iconRight: Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],

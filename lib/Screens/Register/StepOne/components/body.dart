@@ -38,14 +38,14 @@ class Body extends StatelessWidget {
                     child: Text(
                       locale.translate('register.title'),
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w900,
                         fontSize: 30,
                         color: Color.fromRGBO(89, 176, 250, 1),
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 10.0, bottom: 30.0),
+                    padding: EdgeInsets.only(top: 0),
                     child: Text(
                       locale.translate('register.require'),
                       style: TextStyle(
@@ -62,8 +62,9 @@ class Body extends StatelessWidget {
                     onChanged: (value) {},
                   ),
                   PasswordField(
-                      text: locale.translate('register.password'),
-                      onChanged: this.onPasswordChanged),
+                    text: locale.translate('register.password'),
+                    onChanged: this.onPasswordChanged,
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(top: 20.0),
                     child: RoundedButton(

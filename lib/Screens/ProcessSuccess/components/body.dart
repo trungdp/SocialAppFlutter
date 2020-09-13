@@ -26,8 +26,8 @@ class Body extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(top: 20.0, left: 25.0, right: 25.0),
               child: Text(
-                // "Chúc mừng bạn đã đổi mật khẩu thành công"
-                "Chúc mừng bạn đã đăng ký tài khoản thành công",
+                "Chúc mừng bạn đã đổi mật khẩu thành công",
+                // "Chúc mừng bạn đã đăng ký tài khoản thành công",
                 style: TextStyle(
                   color: Color.fromRGBO(119, 119, 127, 1),
                   fontSize: 16

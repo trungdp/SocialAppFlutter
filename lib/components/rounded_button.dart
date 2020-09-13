@@ -36,26 +36,21 @@ class RoundedButton extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
-            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
             color: color,
             onPressed: press,
             child: new Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 this.iconLeft != null ? this.iconLeft : Text(''),
-                // Expanded(
-                //   child: Padding(
-                //     padding: const EdgeInsets.all(16.0),
-                //     // child: Image.asset('images/user1.png'),
-                //   ),
-                // ),
                 Text(
                   text,
                   style: TextStyle(
                     color: textColor,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold
                   ),
+                  textAlign: TextAlign.center,
                 ),
                 this.iconRight != null ? this.iconRight : Text(''),
               ],

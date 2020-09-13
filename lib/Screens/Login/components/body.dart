@@ -40,7 +40,7 @@ class Body extends StatelessWidget {
                       child: Text(
                         locale.translate('login.title'),
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w900,
                           fontSize: 30,
                           color: Color.fromRGBO(89, 176, 250, 1),
                         ),
@@ -87,52 +87,6 @@ class Body extends StatelessWidget {
                   ],
                 ),
               ),
-              // Container(
-              //   margin: const EdgeInsets.only(top: 70.0, left: 15),
-              //   child: Align(
-              //     alignment: Alignment.bottomLeft,
-              //     child: Text(
-              //       locale.translate('login.title'),
-              //       style: TextStyle(
-              //         fontWeight: FontWeight.w900,
-              //         fontSize: 30,
-              //         color: Color.fromRGBO(89, 176, 250, 1),
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              // Container(
-              //   margin: const EdgeInsets.only(top: 10.0, bottom: 50),
-              //   child: Text(
-              //     locale.translate('login.require'),
-              //     style: TextStyle(
-              //         color: Color.fromRGBO(119, 119, 127, 1),
-              //         fontWeight: FontWeight.bold),
-              //   ),
-              // ),
-              // RoundedTextField(
-              //   lable: locale.translate('login.email'),
-              //   onChanged: (value) {},
-              // ),
-              // RoundedPasswordField(onChanged: (value) {}),
-              // RoundedButton(
-              //   text: locale.translate('login.title'),
-              //   color: Color.fromRGBO(78, 153, 242, 1),
-              //   textColor: Colors.white,
-              //   press: () {},
-              // ),
-              // Text(
-              //   locale.translate('login.or'),
-              //   style: TextStyle(
-              //     color: Color.fromRGBO(177, 176, 186, 1),
-              //   ),
-              // ),
-              // RoundedButton(
-              //   text: locale.translate('login.facebook'),
-              //   color: Color.fromRGBO(66, 103, 178, 1),
-              //   textColor: Colors.white,
-              //   press: () {},
-              // ),
             ],
           ),
           new Positioned(

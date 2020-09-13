@@ -67,7 +67,7 @@ class _BodyState extends State<Body> {
                   Text(
                     locale.translate('register.infoContact'),
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w900,
                       fontSize: 30,
                       color: Color.fromRGBO(89, 176, 250, 1),
                     ),

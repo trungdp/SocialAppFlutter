@@ -1,15 +1,4 @@
 {
-    "requireSuccess": "Yêu cầu thành công",
-    "activeText": "Vui lòng nhập mã kích hoạt để chúng tôi\n chuyển sang màn hình đổi mật khẩu",
-    "activeCode": "MÃ KÍCH HOẠT",
-    "error": "Lỗi:",
-    "confirmCode": "Xác nhận mã",
-    "goBack": "Quay lại",
-    "requiredText": "Vui lòng điền đủ các thông tin cần thiết",
-    "newPassword": "Mật khẩu mới",
-    "lblEmail": "Email",
-    "lblPassword": "Mật khẩu",
-    "lblForgotPass": "Quên mật khẩu",
     "btn": {
         "next": "Tiếp tục"
     },
@@ -40,9 +29,24 @@
         "termsOfUse": "điều khoản sử dụng",
         "btnFinish": "Hoàn tất đăng ký"
     },
-    "changePassword":{
+    "changePassword": {
         "title": "Đổi mật khẩu",
-        "newPass":"MẬT KHẨU MỚI",
-        "confirmPassword":"NHẬP LẠI MẬT KHẨU"
+        "newPass": "MẬT KHẨU MỚI",
+        "confirmPassword": "NHẬP LẠI MẬT KHẨU"
+    },
+    "forgotPassword": {
+        "title": "Quên mật khẩu?",
+        "require": "Vui lòng cung cấp email cho chúng tôi để giúp bạn cài đặt lại mật khẩu",
+        "email": "EMAIL",
+        "send": "Gửi yêu cầu"
+    },
+    "requireSuccess":{
+        "title":"Yêu cầu thành công",
+        "require":"Vui lòng nhập mã kích hoạt để chúng tôi chuyển sang màn hình đổi mật khẩu",
+        "activeCode":"MÃ KÍCH HOẠT",
+        "error": "Lỗi:",
+        "wrong":"Nhập mã kích hoạt bị sai. Nhập lại",
+        "confirm":"Xác nhận mã",
+        "goBack":"Quay lại"
     }
 }

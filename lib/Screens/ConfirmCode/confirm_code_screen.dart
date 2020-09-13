@@ -10,7 +10,7 @@ class ConfirmCodeScreen extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/background.png"),
+              image: AssetImage("assets/images/bg-success-require.png"),
               fit: BoxFit.cover,
             ),
           ),
