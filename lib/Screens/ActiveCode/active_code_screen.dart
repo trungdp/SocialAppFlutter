@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Screens/Register/StepTwo/components/body.dart';
+import 'package:myapp/Screens/ActiveCode/components/body.dart';
 
-class RegisterStepTwoScreen extends StatelessWidget {
+class ActiveCodeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,13 +10,17 @@ class RegisterStepTwoScreen extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/background.png"),
+              image: AssetImage("assets/images/bg-success-require.png"),
               fit: BoxFit.cover,
             ),
           ),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: Body(onSubmit: () {}),
+            child: Body(
+              // onConfirmChanged: () {},
+              // onPasswordChanged: () {},
+              onSubmit: () {},
+            ),
           ),
         ),
       ),

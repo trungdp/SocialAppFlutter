@@ -24,7 +24,9 @@ class Body extends StatelessWidget {
               alignment: Alignment.topRight,
               child: IconButton(
                 icon: new Icon(Icons.clear),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
               ),
             ),
             Container(

@@ -19,7 +19,9 @@ class RegisterStepOneScreen extends StatelessWidget {
             child: Body(
               // onConfirmChanged: () {},
               // onPasswordChanged: () {},
-              onSubmit: () {},
+              onSubmit: () {
+                Navigator.pushNamed(context, "/register-two");
+              },
             ),
           ),
         ),

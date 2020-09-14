@@ -3,8 +3,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 import 'package:myapp/Screens/ChangePass/change_pass_screen.dart';
-import 'package:myapp/Screens/ConfirmCode/confirm_code_screen.dart';
+import 'package:myapp/Screens/ActiveCode/active_code_screen.dart';
 import 'package:myapp/Screens/ForgotPassword/forgot_pass_screen.dart';
+import 'package:myapp/Screens/Home/home_screen.dart';
 import 'package:myapp/Screens/Login/login_screen.dart';
 import 'package:myapp/Screens/ProcessSuccess/process_sucess_screen.dart';
 import 'package:myapp/Screens/Register/StepOne/step_one_screen.dart';
@@ -24,34 +25,44 @@ class MyApp extends StatelessWidget {
     ));
     FlutterStatusbarcolor.setStatusBarColor(Color(0xFFFFFF));
     return MaterialApp(
-      locale: const Locale('vi', ''),
-      supportedLocales: [
-        const Locale('vi', ''),
-        const Locale('en', ''),
-      ],
-      localizationsDelegates: [
-        ApplicationLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      localeResolutionCallback: (locale, supportedLocales) {
-        for (var supportedLocale in supportedLocales) {
-          if (supportedLocale.languageCode == locale.languageCode &&
-              supportedLocale.countryCode == locale.countryCode) {
-            return supportedLocale;
+        locale: const Locale('vi', ''),
+        supportedLocales: [
+          const Locale('vi', ''),
+          const Locale('en', ''),
+        ],
+        localizationsDelegates: [
+          ApplicationLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        localeResolutionCallback: (locale, supportedLocales) {
+          for (var supportedLocale in supportedLocales) {
+            if (supportedLocale.languageCode == locale.languageCode &&
+                supportedLocale.countryCode == locale.countryCode) {
+              return supportedLocale;
+            }
           }
-        }
-        return supportedLocales.first;
-      },
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Auth',
-      theme: ThemeData(
-        primaryColor: Colors.white,
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: 'Nunito',
-        // appBarTheme: Theme.of(context).appBarTheme.copyWith(brightness: Brightness.light),
-      ),
-      home: ConfirmCodeScreen()
-    );
+          return supportedLocales.first;
+        },
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Auth',
+        theme: ThemeData(
+          primaryColor: Colors.white,
+          scaffoldBackgroundColor: Colors.white,
+          fontFamily: 'Nunito',
+          // appBarTheme: Theme.of(context).appBarTheme.copyWith(brightness: Brightness.light),
+        ),
+        // home: ForgotPasswordScreen(),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => HomeScreen(),
+          '/login': (context) => LoginScreen(),
+          '/process-success': (context) => ProcessSuccessScreen(),
+          '/register-one': (context) => RegisterStepOneScreen(),
+          '/register-two': (context) => RegisterStepTwoScreen(),
+          '/forgot': (context) => ForgotPasswordScreen(),
+          '/active-code': (context) => ActiveCodeScreen(),
+          '/change-password': (context) => ChangePassScreen(),
+        });
   }
 }

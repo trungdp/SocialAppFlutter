@@ -66,7 +66,9 @@ class Body extends StatelessWidget {
                         text: locale.translate('login.title'),
                         color: Color.fromRGBO(78, 153, 242, 1),
                         textColor: Colors.white,
-                        press: () {},
+                        press: () {
+                          Navigator.pop(context);
+                        },
                       ),
                     ),
                     Align(
